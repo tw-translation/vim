@@ -2099,7 +2099,7 @@ buflist_new(
 	    buf->b_fnum = top_file_num++;
 	if (top_file_num < 0)		/* wrap around (may cause duplicates) */
 	{
-	    emsg(_("W14: Warning: List of file names overflow"));
+	    emsg(wrnmsg(14, _("List of filenames overflow")));
 	    if (emsg_silent == 0)
 	    {
 		out_flush();

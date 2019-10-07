@@ -1393,7 +1393,7 @@ source_pyx_file(exarg_T *eap, char_u *fname)
 	ex_pyfile(&ex);
 # else
 	vim_snprintf((char *)IObuff, IOSIZE,
-		_("W20: Required python version 2.x not supported, ignoring file: %s"),
+		wrnmsg(20, _("Required python version 2.x not supported, ignoring file: %s")),
 		fname);
 	msg((char *)IObuff);
 # endif
@@ -1405,7 +1405,7 @@ source_pyx_file(exarg_T *eap, char_u *fname)
 	ex_py3file(&ex);
 # else
 	vim_snprintf((char *)IObuff, IOSIZE,
-		_("W21: Required python version 3.x not supported, ignoring file: %s"),
+		wrnmsg(21, _("Required python version 3.x not supported, ignoring file: %s")),
 		fname);
 	msg((char *)IObuff);
 # endif

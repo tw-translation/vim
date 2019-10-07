@@ -3026,7 +3026,7 @@ syn_add_group(char_u *name)
 	    // This is an error, but since there previously was no check only
 	    // give a warning.
 	    msg_source(HL_ATTR(HLF_W));
-	    msg(_("W18: Invalid character in group name"));
+	    msg(wrnmsg(18, _("Invalid character in group name")));
 	    break;
 	}
     }

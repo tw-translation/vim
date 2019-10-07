@@ -520,7 +520,7 @@ au_del_group(char_u *name)
 	    for (ap = first_autopat[(int)event]; ap != NULL; ap = ap->next)
 		if (ap->group == i && ap->pat != NULL)
 		{
-		    give_warning((char_u *)_("W19: Deleting augroup that is still in use"), TRUE);
+		    give_warning((char_u *)wrnmsg(19, _("Deleting augroup that is still in use")), TRUE);
 		    in_use = TRUE;
 		    event = NUM_EVENTS;
 		    break;

@@ -26,7 +26,7 @@
     void
 change_warning(int col)
 {
-    static char *w_readonly = N_("W10: Warning: Changing a readonly file");
+    static char *w_readonly = wrnmsg(10, N_("Changing a readonly file"));
 
     if (curbuf->b_did_warn == FALSE
 	    && curbufIsChanged() == 0

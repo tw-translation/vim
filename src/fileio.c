@@ -4100,17 +4100,17 @@ buf_check_timestamp(
 #endif
 		    if (reason[2] == 'n')
 		    {
-			mesg = _("W12: Warning: File \"%s\" has changed and the buffer was changed in Vim as well");
+			mesg = wrnmsg(12, _("File \"%s\" has changed and the buffer was changed in Vim as well"));
 			mesg2 = _("See \":help W12\" for more info.");
 		    }
 		    else if (reason[1] == 'h')
 		    {
-			mesg = _("W11: Warning: File \"%s\" has changed since editing started");
+			mesg = wrnmsg(11, _("File \"%s\" has changed since editing started"));
 			mesg2 = _("See \":help W11\" for more info.");
 		    }
 		    else if (*reason == 'm')
 		    {
-			mesg = _("W16: Warning: Mode of file \"%s\" has changed since editing started");
+			mesg = wrnmsg(16, _("Mode of file \"%s\" has changed since editing started"));
 			mesg2 = _("See \":help W16\" for more info.");
 		    }
 		    else
@@ -4126,7 +4126,7 @@ buf_check_timestamp(
 						&& vim_fexists(buf->b_ffname))
     {
 	retval = 1;
-	mesg = _("W13: Warning: File \"%s\" has been created after editing started");
+	mesg = wrnmsg(13, _("File \"%s\" has been created after editing started"));
 	buf->b_flags |= BF_NEW_W;
 #if defined(FEAT_CON_DIALOG) || defined(FEAT_GUI_DIALOG)
 	can_reload = TRUE;

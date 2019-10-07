@@ -2399,7 +2399,7 @@ ex_function(exarg_T *eap)
 		    nextcmd = line_arg;
 		else if (*p != NUL && *p != '"' && p_verbose > 0)
 		    give_warning2(
-			 (char_u *)_("W22: Text found after :endfunction: %s"),
+			 (char_u *)wrnmsg(22, _("Text found after :endfunction: %s")),
 			 p, TRUE);
 		if (nextcmd != NULL)
 		{

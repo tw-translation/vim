@@ -3118,7 +3118,7 @@ set_bool_option(
 	     * set. */
 	    if (STRCMP(p_enc, "utf-8") != 0)
 	    {
-		static char *w_arabic = N_("W17: Arabic requires UTF-8, do ':set encoding=utf-8'");
+		static char *w_arabic = wrnmsg(17, N_("Arabic requires UTF-8, do ':set encoding=utf-8'"));
 
 		msg_source(HL_ATTR(HLF_W));
 		msg_attr(_(w_arabic), HL_ATTR(HLF_W));

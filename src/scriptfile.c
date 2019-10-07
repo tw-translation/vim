@@ -1454,7 +1454,7 @@ get_one_sourceline(struct source_cookie *sp)
 		    if (!sp->error)
 		    {
 			msg_source(HL_ATTR(HLF_W));
-			emsg(_("W15: Warning: Wrong line separator, ^M may be missing"));
+			emsg(wrnmsg(15, _("Wrong line separator, ^M may be missing")));
 		    }
 		    sp->error = TRUE;
 		    sp->fileformat = EOL_UNIX;
